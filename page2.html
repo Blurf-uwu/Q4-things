@@ -14,25 +14,60 @@
                     <a href="index.html">Home</a>
                     <a href="page2.html">Register</a>
                     <a href="page3.html">Ticket</a>
-                </div>
+                </div>  
             </nav>
         </header>
 
-        <div class="content">
-            <img src="#" alt="img" width="469px" height="383px">
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                dicta sunt explicabo. Nemo enim ipsam voluptatem quia v
-            </p>
-            </div>
+        <h1>Hotel Booking Form</h1>
+    <form action="/submit-booking" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-            <div class="timePh"></div>
-            <div class="timeJp"></div>
-            <div class="timeUs"></div>
-            <div class="Calendar"></div>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
 
+        <label for="time">Time:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
 
+        <label for="people">Number of People:</label><br>
+        <input type="number" id="people" name="people" min="1" required><br><br>
+
+        <label for="addons">Select Add-ons:</label><br>
+        <select id="addons" name="addons" multiple>
+            <option value="breakfast">Breakfast Buffet - 900Php</option>
+            <option value="transport">Airport Transport - 400Php</option>
+            <option value="comedy">Comedy Show - 500Php</option>
+            <option value="massage">Massage - 1200Php</option>
+        </select><br><br>
+
+        <input type="submit" value="Book Now">
+
+        <div class="rooms">
+                    <div class="singleRoom">
+                        <img src="#" alt="#">
+                        <p></p>
+                    </div>
+
+                        <div class="doubleRoom">
+                            <img src="#" alt="#">
+                            <p></p>
+                        </div>
+
+                            <div class="kingRoom">
+                                <img src="#" alt="#">
+                                <p></p>
+                            </div>
+
+                                <div class="quadRoom">
+                                    <img src="#" alt="#">
+                                    <p></p>
+                                </div>
+
+                                    <div class="luxurySuite">
+                                        <img src="#" alt="#">
+                                        <p></p>
+                                    </div>
+                                </div>
 
             <footer class="footer">
                 <div class="socials">
