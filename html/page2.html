@@ -3,83 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking Form</title>
+    <title>Document</title>
     <style rel="stylesheet" href="../css/page2.css"></style>
-</head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif; text-decoration: none;
+          list-style: none;
+          }
+  
+      body{
+          background-image: url(../images/bg.png);
+          background-repeat: repeat-x;
+      }
+  .contanier{
+      width: 100%;
+      height: 100vh;
+  }
+  
+  .logo {
+              transition: 0.33s ease;
+          }
+          
+  .logo:hover{
+              color:  rgb(136, 12, 244);
+              text-shadow: 25px rgb(136, 12, 244), 
+                          50px  rgb(136, 12, 244);
+              transform: scale(1.1);
+          }
+          
+  header nav{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      padding-top: 20px;
+      z-index: 100;
+      position: relative;
+  
+  }
+  header nav .logo{
+      font-size: 35px;
+      font-weight: bold;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  header nav .nav-links a{
+      color: #ffffff;
+      margin-left: 50px;
+      position: relative;
+      text-decoration: none;
+      font-size: 29px;
+      font-weight: bold;
+      text-shadow:
+                 -1px -1px 0 black,
+                  1px -1px 0 black,
+                 -1px 1px 0 black,
+                  1px 1px 0 black;
+  }
+  header nav .nav-links a::after{
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(to left, #4200fc , #f901fc);
+      transition: 0.3s;
+  }
+  header nav .nav-links a:hover::after{
+      width: 100%;
+  }
+  .bookingForm{
+      float: left;
+      margin-left: 40px;
+  }
+  .img{
+      float: left;
+  }
+  .bookingForm h1{
+              text-align: center;
+              margin-top: 1em;
+              margin-bottom: 0.4em;
+              font-size: 35px;    
+          }
+          .bookingForm .form{
+              max-width: 48em;
+              display: flex;
+              margin: 1 rem auto;
+              float:left;
+          }
+  
+          .bookingForm .form .name{
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+          }
+  
+          .name, .date, .time, .people, .add label{
+             color: white;
+             border-radius: 30px;
+              margin: 10px;
+              resize: none;
+              justify-content: center;
+              border-bottom: 20px;
+              width: 50%;
+  
+          }       
+              
+          .submit{
+              text-align: center;
+              width: 100px;
+              padding: 1em;
+              font-size: 12px;
+              font-weight: bold;
+              color: black;
+              border-radius: 30px;
+              margin: 10px;
+              resize: none;
+              justify-content: center;
+              border-bottom: 20px;
+              text-align: center;
+          
+          }
+  
+          .container .heading{
+          text-align: center;
+          padding-bottom: 15px;
+          color:#fff;
+          text-shadow: 0 5px 10px rgba(0,0,0,.2);
+          font-size: 0px;
+          float:left;
+      }
+      
+      .container .box-container{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+          gap:15px;
+      }
+      
+      .container .box-container .box{
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          border-radius: 5px;
+          background: #fff;
+          text-align: center;
+          padding:30px 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+      
+      .container .box-container .box img{
+          height: 100px;
+      }
+      
+      .container .box-container .box h3{
+          color:#444;
+          font-size: 11px;
+          padding:10px 0;
+      }
+      
+      .container .box-container .box p{
+          color:#777;
+          font-size: 9px;
+          line-height: 1.8;
+      }
+      
+      .container .box-container .box .btn{
+          margin-top: 10px;
+          display: inline-block;
+          background:#333;
+          color:#fff;
+          font-size: 17px;
+          border-radius: 5px;
+          padding: 8px 25px;
+      }
+      
+      .container .box-container .box .btn:hover{
+          letter-spacing: 1px;
+      }
+      
+      .container .box-container .box:hover{
+          box-shadow: 0 10px 15px rgba(0,0,0,.3);
+          transform: scale(1.03);
+      }
+      
+  
+  .footer{
+            
+              bottom: 0;
+              width: 100%;
+              padding: 40px 0;
+              margin-top: 350px;
+              background-color: rgb(33, 32, 32);
+          }
+          .footer .socials{
+              text-align: center;
+              padding-bottom: 25px;
+              color:aliceblue;
+          }
+          .footer .socials a{
+              font-size: 24px;
+              color: aliceblue;
+              border: 2px solid rgb(237, 183, 20);
+              width: 40px;
+              height: 40px;
+              line-height: 39px;
+              display: inline-block;
+              text-align: center;
+              border-radius: 50%;
+              margin: 0 8px;
+              box-shadow:0px 0px 25px  rgb(237, 183, 20), 
+                         0px 0px 50px  rgb(237, 183, 20);
+              transition: 0.40s ease;
+          }
+          .footer .socials a:hover{
+              transform: scale(1.5) translateY(-10px);
+              color: rgb(237, 183, 20);
+              border: 2px solid  rgb(237, 183, 20)
+          }
+  
+          .footer .copyright{
+              margin-top: 15px;
+              text-align: center;
+              font-size: 10px;
+              color: aliceblue;
+          }
+  </style>
+</head> 
 <body>
-    <div class="container">
+    <div class="container"> 
         <header>
             <nav>
-                <img src="#" alt="Logo" class="logo" width="60px">
+               <img src="../images/logo.png" alt="Logo" class="logo" width="80px">
                 <div class="nav-links">
-                    <a href="../index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="page2.html">Register</a>
                     <a href="page3.html">Ticket</a>
-                </div>
+                </div>  
             </nav>
         </header>
-
+        <div class="bookingForm">
         <h1>Hotel Booking Form</h1>
-        <form id="bookingForm" action="page3.html" method="get">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
 
-            <label for="date">Date:</label><br>
-            <input type="date" id="date" name="date" required><br><br>
+    <form id="bookingForm" action="page3.html" method="get">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-            <label for="noOfDays">Number Of Days:</label><br>
-            <input type="number" id="noOfDays" name="noOfDays" required><br><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
 
-            <label for="people">Number of People:</label><br>
-            <input type="number" id="people" name="people" min="1" required><br><br>
+        <label for="noOfDays">Number Of Days:</label><br>
+        <input type="number" id="noOfDays" name="noOfDays" required><br><br>
 
-            <label for="addons">Select Add-ons:</label><br>
-            <select id="addons" name="addons" multiple>
-                <option value="breakfast">Breakfast Buffet - 900Php</option>
-                <option value="transport">Airport Transport - 400Php</option>
-                <option value="comedy">Comedy Show - 500Php</option>
-                <option value="massage">Massage - 1200Php</option>
-            </select><br><br>
+        <label for="people">Number of People:</label><br>
+        <input type="number" id="people" name="people" min="1" required><br><br>
 
-            <input type="submit" value="Book Now">
-        </form>
+        <label for="addons">Select Add-ons:</label><br>
+        <select id="addons" name="addons" multiple>
+            <option value="breakfast">Breakfast Buffet - 900Php</option>
+            <option value="transport">Airport Transport - 400Php</option>
+            <option value="comedy">Comedy Show - 500Php</option>
+            <option value="massage">Massage - 1200Php</option>
+        </select><br><br>
 
-        <div class="rooms">
-            <div class="singleRoom">
-                <img src="#" alt="#">
-                <p></p>
+        <input type="submit" value="Book Now">
+    </form>
+
+    </div>
+    <div class="container">
+
+        <h1 class="heading">Rooms</h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <img src="../images/single.jpg" alt="">
+                <h3>Single Room</h3>
+                <p>Refreshing and relaxing room for your solo travel vacations made to bring you comfort and joy. Good for 1 person.</p>
+                <a href="#" class="btn">select</a>
+            </div>
+    
+            <div class="box">
+                <img src="../images/double.jpg" alt="">
+                <h3>Double Room</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                <a href="#" class="btn">select</a>
+            </div>
+    
+            <div class="box">
+                <img src="../images/king.jpg" alt="">
+                <h3>King Room</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                <a href="#" class="btn">select</a>
+            </div>
+    
+            <div class="box">
+                <img src="../images/quad.jpg" alt="">
+                <h3>Quad Room</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                <a href="#" class="btn">select</a>
+            </div>
+    
+            <div class="box">
+                <img src="../images/lux.jpg" alt="">
+                <h3>Luxury Suite</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                <a href="#" class="btn">select</a>
             </div>
 
-            <div class="doubleRoom">
-                <img src="#" alt="#">
-                <p></p>
+            <div class="box">
+                <img src="../images/pent.jpg" alt="">
+                <h3>Penthouse Suite</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+                <a href="#" class="btn">select</a>
             </div>
-
-            <div class="kingRoom">
-                <img src="#" alt="#">
-                <p></p>
-            </div>
-
-            <div class="quadRoom">
-                <img src="#" alt="#">
-                <p></p>
-            </div>
-
-            <div class="luxurySuite">
-                <img src="#" alt="#">
-                <p></p>
-            </div>
+    
         </div>
+    
     </div>
 
-    <footer class="footer">
-        <div class="socials">
-            <a href="#"><img src="#" width="36px"></a>
-            <a href="#"><img src="#" width="36"></a>
-            <a href="#"><img src="#" width="36"></a>
-        </div>
-
-        <p class="copyright">© 2024 | All Rights Reserved</p>
-    </footer>
+            <footer class="footer">
+                <div class="socials">
+                    <a href="#"><img src="../images/tiktik.jpg" width="36px"></a>
+                    <a href="#"><img src="../images/twittwit.png" width="36"></a>
+                    <a href="#"><img src="../images/fb.png" width="36"></a>
+                </div>
+        
+                    <p class="copyright">© 2024 | All Rights Reserved</p>
+        
+              </footer>
 </body>
 </html>
