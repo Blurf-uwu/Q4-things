@@ -5,12 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="../js/js.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav .logo {
+            font-size: 20px;
+        }
+
+        header nav .nav-links a {
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        header nav .nav-links a:hover {
+            color: rgb(136, 12, 244);
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content img {
+            width: 50%;
+            height: auto;
+        }
+
+        .content p {
+            width: 45%;
+        }
+
+        .time {
+            text-align: right;
+            padding: 0 20px;
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer .socials a {
+            color: aliceblue;
+            border: 2px solid rgb(136, 12, 244);
+            width: 40px;
+            height: 40px;
+            line-height: 39px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            transition: 0.40s ease;
+        }
+
+        .footer .socials a:hover {
+            transform: scale(1.5) translateY(-10px);
+            color: rgb(136, 12, 244);
+            border: 2px solid rgb(136, 12, 244);
+        }
+
+        .footer .copyright {
+            margin-top: 15px;
+            font-size: 10px;
+            color: aliceblue;
+        }
+    </style>
 </head>
 <body> 
-    <div class="contanier"> 
+    <div class="container"> 
         <header>
             <nav>
-               <img src="#" alt="Logo" class="logo" width="60px">
+                <img src="#" alt="Logo" class="logo" width="60px">
                 <div class="nav-links">
                     <a href="./index.html">Home</a>
                     <a href="./html/page2.html">Register</a>
@@ -20,137 +107,55 @@
         </header>
 
         <div class="content">
-            <img src="#" alt="img" width="469px" height="383px">
+            <img src="#" alt="img">
             <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia v
             </p>
+        </div>
+
+        <div class="time timePh"></div>
+        <div class="time timeJp"></div>
+        <div class="time timeUs"></div>
+
+        <footer class="footer">
+            <div class="socials">
+                <a href="#"><img src="#" width="36px"></a>
+                <a href="#"><img src="#" width="36"></a>
+                <a href="#"><img src="#" width="36"></a>
             </div>
+            <p class="copyright">© 2024 | All Rights Reserved</p>
+        </footer>
+    </div>
 
-            <div class="timePh"></div>
-            <div class="timeJp"></div>
-            <div class="timeUs"></div>
-            <div class="Calendar"></div>
-
-
-
-            <footer class="footer">
-                <div class="socials">
-                    <a href="#"><img src="#" width="36px"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                </div>
-        
-                    <p class="copyright">© 2024 | All Rights Reserved</p>
-        
-              </footer>
-
-<style>
-.contanier{
-    width: 100%;
-    height: 100vh;
-}
-
-.logo {
-            transition: 0.33s ease;
-        }
-        
-        .logo:hover{
-            color:  rgb(136, 12, 244);
-            text-shadow: 25px rgb(136, 12, 244), 
-                        50px  rgb(136, 12, 244);
-            transform: scale(1.1);
-        }
-        
-header nav{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding-top: 20px;
-    z-index: 100;
-    position: relative;
-}
-header nav .logo{
-    font-size: 35px;
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-header nav .nav-links a{
-    color: #000000;
-    margin-left: 50px;
-    position: relative;
-}
-header nav .nav-links a::after{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(to left, #4200fc , #f901fc);
-    transition: 0.3s;
-}
-header nav .nav-links a:hover::after{
-    width: 100%;
-}
-
-.footer{
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            padding: 40px 0;
-            margin-top: 40px;
-        }
-        .footer .socials{
-            text-align: center;
-            padding-bottom: 25px;
-            color:aliceblue;
-        }
-        .footer .socials a{
-            font-size: 24px;
-            color: aliceblue;
-            border: 2px solid  rgb(136, 12, 244);
-            width: 40px;
-            height: 40px;
-            line-height: 39px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            margin: 0 8px;
-            box-shadow:0px 0px 25px  rgb(136, 12, 244), 
-                       0px 0px 50px  rgb(136, 12, 244);
-            transition: 0.40s ease;
-        }
-        .footer .socials a:hover{
-            transform: scale(1.5) translateY(-10px);
-            color: rgb(136, 12, 244);
-            border: 2px solid  rgb(136, 12, 244);
+    <script>
+        // Function to get current time in a specific timezone
+        function getCurrentTime(timezone) {
+            const date = new Date().toLocaleString("en-US", { timeZone: timezone });
+            return new Date(date);
         }
 
-        .footer .copyright{
-            margin-top: 15px;
-            text-align: center;
-            font-size: 10px;
-            color: aliceblue;
+        // Function to format time
+        function formatTime(date) {
+            const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+            return date.toLocaleString('en-US', options);
         }
-</style>
 
+        // Display current time for each timezone
+        const timePh = document.querySelector('.timePh');
+        const timeJp = document.querySelector('.timeJp');
+        const timeUs = document.querySelector('.timeUs');
 
+        setInterval(() => {
+            const currentTimePh = getCurrentTime('Asia/Manila');
+            const currentTimeJp = getCurrentTime('Asia/Tokyo');
+            const currentTimeUs = getCurrentTime('America/New_York');
 
-
-
-
-
-
-
-
-
-
-
+            timePh.textContent = `Philippines: ${formatTime(currentTimePh)}`;
+            timeJp.textContent = `Japan: ${formatTime(currentTimeJp)}`;
+            timeUs.textContent = `US (New York): ${formatTime(currentTimeUs)}`;
+        }, 1000); // Update every second
+    </script>
 </body>
 </html>
