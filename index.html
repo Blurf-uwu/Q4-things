@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="../js/js.js"></script>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Adding background color to the whole page */
         }
 
         .container {
@@ -17,9 +17,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
+            padding: 20px; /* Adding padding for spacing from the edges */
         }
 
         header {
+            width: 100%;
             background-color: #f0f0f0;
             padding: 10px 20px;
             display: flex;
@@ -27,24 +30,24 @@
             align-items: center;
         }
 
-        header nav .logo {
-            font-size: 20px;
+        header .logo {
+            width: 60px;
         }
 
-        header nav .nav-links a {
+        header .nav-links a {
             color: black;
             text-decoration: none;
             margin-left: 20px;
         }
 
-        header nav .nav-links a:hover {
+        header .nav-links a:hover {
             color: rgb(136, 12, 244);
         }
 
         .content {
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 20px;
         }
 
         .content img {
@@ -56,12 +59,24 @@
             width: 45%;
         }
 
+        #times {
+            width: 50cw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            padding: 20px;
+            border-radius: 20px; /* Adding border-radius to create an oblong shape */
+            background-color: #ffffff; /* Adding background color to the oblong shape */
+        }
+
         .time {
             text-align: right;
-            padding: 0 20px;
+            padding-bottom: 10px;
         }
 
         .footer {
+            width: 100%;
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
@@ -96,14 +111,12 @@
 <body> 
     <div class="container"> 
         <header>
-            <nav>
-                <img src="#" alt="Logo" class="logo" width="60px">
-                <div class="nav-links">
-                    <a href="./index.html">Home</a>
-                    <a href="./html/page2.html">Register</a>
-                    <a href="./html/page3.html">Ticket</a>
-                </div>
-            </nav>
+            <img src="#" alt="Logo" class="logo">
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./html/page2.html">Register</a>
+                <a href="./html/page3.html">Ticket</a>
+            </div>
         </header>
 
         <div class="content">
@@ -115,9 +128,11 @@
             </p>
         </div>
 
-        <div class="time timePh"></div>
-        <div class="time timeJp"></div>
-        <div class="time timeUs"></div>
+        <div id="times">
+            <div class="time timePh"></div>
+            <div class="time timeJp"></div>
+            <div class="time timeUs"></div>
+        </div>
 
         <footer class="footer">
             <div class="socials">
