@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="../js/js.js"></script>
 </head> 
 <body>
     <div class="contanier"> 
@@ -19,15 +20,15 @@
         </header>
 
         <h1>Hotel Booking Form</h1>
-    <form action="/submit-booking" method="post">
+    <form action="./page3.html" method="post">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
         <label for="date">Date:</label><br>
         <input type="date" id="date" name="date" required><br><br>
 
-        <label for="time">Time:</label><br>
-        <input type="time" id="time" name="time" required><br><br>
+        <label for="noOfDays">Number Of Days:</label><br>
+        <input type="number" id="noOfDays" name="noOfDays" required><br><br>
 
         <label for="people">Number of People:</label><br>
         <input type="number" id="people" name="people" min="1" required><br><br>
