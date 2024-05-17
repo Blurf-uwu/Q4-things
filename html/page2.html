@@ -20,7 +20,7 @@
         </header>
 
         <h1>Hotel Booking Form</h1>
-    <form action="./page3.html" method="post">
+    <form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -41,7 +41,7 @@
             <option value="massage">Massage - 1200Php</option>
         </select><br><br>
 
-        <input type="submit" value="Book Now">
+        <input type="submit" onclick="calculatePrice()" value="Book Now">
 
         <div class="rooms">
                     <div class="singleRoom">
@@ -69,6 +69,7 @@
                                         <p></p>
                                     </div>
                                 </div>
+    </form>
 
             <footer class="footer">
                 <div class="socials">
