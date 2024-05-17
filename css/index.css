@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Adding background color to the whole page */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adding padding for spacing from the edges */
+}
+
+header {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 60px;
+}
+
+header .nav-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header .nav-links a:hover {
+    color: rgb(136, 12, 244);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content img {
+    width: 50%;
+    height: auto;
+}
+
+.content p {
+    width: 45%;
+}
+
+#times {
+    width: 50cw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 20px;
+    border-radius: 20px; /* Adding border-radius to create an oblong shape */
+    background-color: #ffffff; /* Adding background color to the oblong shape */
+}
+
+.time {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .socials a {
+    color: aliceblue;
+    border: 2px solid rgb(136, 12, 244);
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: 0.40s ease;
+}
+
+.footer .socials a:hover {
+    transform: scale(1.5) translateY(-10px);
+    color: rgb(136, 12, 244);
+    border: 2px solid rgb(136, 12, 244);
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 10px;
+    color: aliceblue;
+}
