@@ -3,110 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="../js/js.js"></script>
-</head> 
-<body>
-    <div class="contanier"> 
-        <header>
-            <nav>
-               <img src="#" alt="Logo" class="logo" width="60px">
-                <div class="nav-links">
-                    <a href="../index.html">Home</a>
-                    <a href="page2.html">Register</a>
-                    <a href="page3.html">Ticket</a>
-                </div>
-            </nav>
-        </header>
+    <title>Ticket</title>
+    <script src="../js/page3.js"></script>
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
 
-        <p class="msg"></p>
-
-        <div id="ticket">
-            <h3>Show the booking ticket upon arriving onto the hoetel:</h3>
-            <div id="ticketInfo">
-                <img src="#" alt="#">
-                <p id="ticketDescription"></p>
-            </div>
-        </div>
-            <div id="total">Total: 00.00</div>
-
-            <footer class="footer">
-                <div class="socials">
-                    <a href="#"><img src="#" width="36px"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                </div>
-        
-                    <p class="copyright">© 2024 | All Rights Reserved</p>
-        
-              </footer>
-
-<style>
-.contanier{
-    width: 100%;
-    height: 100vh;
-}
-
-.logo {
+        .logo {
             transition: 0.33s ease;
         }
         
-        .logo:hover{
-            color:  rgb(136, 12, 244);
-            text-shadow: 25px rgb(136, 12, 244), 
-                        50px  rgb(136, 12, 244);
+        .logo:hover {
+            color: rgb(136, 12, 244);
+            text-shadow: 25px rgb(136, 12, 244), 50px rgb(136, 12, 244);
             transform: scale(1.1);
         }
         
-header nav{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding-top: 20px;
-    z-index: 100;
-    position: relative;
-}
-header nav .logo{
-    font-size: 35px;
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-header nav .nav-links a{
-    color: #000000;
-    margin-left: 50px;
-    position: relative;
-}
-header nav .nav-links a::after{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(to left, #4200fc , #f901fc);
-    transition: 0.3s;
-}
-header nav .nav-links a:hover::after{
-    width: 100%;
-}
-
-.footer{
+        header nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding-top: 20px;
+            z-index: 100;
+            position: relative;
+        }
+        
+        header nav .logo {
+            font-size: 35px;
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        header nav .nav-links a {
+            color: #000000;
+            margin-left: 50px;
+            position: relative;
+        }
+        
+        header nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to left, #4200fc, #f901fc);
+            transition: 0.3s;
+        }
+        
+        header nav .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .footer {
             position: relative;
             bottom: 0;
             width: 100%;
             padding: 40px 0;
             margin-top: 40px;
         }
-        .footer .socials{
+        
+        .footer .socials {
             text-align: center;
             padding-bottom: 25px;
-            color:aliceblue;
+            color: aliceblue;
         }
-        .footer .socials a{
+        
+        .footer .socials a {
+            font-size: 24px;
+            color: aliceblue;
+            border: 2px solid rgb(136, 12, 244);
+            width: 40px;
+            height: 40px;
+            line-height: 39px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            box-shadow: 0px 0px 25px rgb(136, 12, 244), 0px 0px 50px rgb(136, 12, 244);
+            transition: 0.40s ease;
+        }
+        
+        .footer .socials a:hover {
+            transform: scale(1.5) translateY(-10px);
+            color: rgb(136, 12, 244);
+            border: 2px solid rgb(136, 12, 244);
+        }
+        
+        .footer .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 10px;
+            color: aliceblue;
+        }
+
+        /* Additional styles specific to this page */
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .logo {
+            transition: 0.33s ease;
+        }
+        
+        .logo:hover {
+            color: rgb(136, 12, 244);
+            text-shadow: 25px rgb(136, 12, 244), 50px rgb(136, 12, 244);
+            transform: scale(1.1);
+        }
+
+        header nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding-top: 20px;
+            z-index: 100;
+            position: relative;
+        }
+
+        header nav .logo {
+            font-size: 35px;
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header nav .nav-links a {
+            color: #000000;
+            margin-left: 50px;
+            position: relative;
+        }
+
+        header nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to left, #4200fc , #f901fc);
+            transition: 0.3s;
+        }
+
+        header nav .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer .socials {
+            text-align: center;
+            padding-bottom: 25px;
+            color: aliceblue;
+        }
+
+        .footer .socials a {
             font-size: 24px;
             color: aliceblue;
             border: 2px solid  rgb(136, 12, 244);
@@ -121,31 +188,55 @@ header nav .nav-links a:hover::after{
                        0px 0px 50px  rgb(136, 12, 244);
             transition: 0.40s ease;
         }
-        .footer .socials a:hover{
+
+        .footer .socials a:hover {
             transform: scale(1.5) translateY(-10px);
             color: rgb(136, 12, 244);
             border: 2px solid  rgb(136, 12, 244);
         }
 
-        .footer .copyright{
+        .footer .copyright {
             margin-top: 15px;
             text-align: center;
             font-size: 10px;
             color: aliceblue;
         }
-</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="#" alt="Logo" class="logo" width="60px">
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="page2.html">Register</a>
+                    <a href="page3.html">Ticket</a>
+                </div>
+            </nav>
+        </header>
 
+        <p class="msg"></p>
 
+        <div id="ticket">
+            <h3>Show the booking ticket upon arriving at the hotel:</h3>
+            <div id="ticketInfo">
+                <img src="#" alt="#">
+                <p id="ticketDescription"></p>
+            </div>
+        </div>
+        <div id="total">Total: <span id="totalAmount">00.00</span></div>
 
-
-
-
-
-
-
-
-
-
-
+        <footer class="footer">
+            <div class="socials">
+                <a href="#"><img src="#" width="36px"></a>
+                <a href="#"><img src="#" width="36"></a>
+                <a href="#"><img src="#" width="36"></a>
+            </div>
+            <p class="copyright">© 2024 | All Rights Reserved</p>
+        </footer>
+    </div>
+    
+    
 </body>
 </html>

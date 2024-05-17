@@ -3,190 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="../js/js.js"></script>
-</head> 
+    <title>Hotel Booking Form</title>
+    <style rel="stylesheet" href="../css/page2.css"></style>
+</head>
 <body>
-    <div class="contanier"> 
+    <div class="container">
         <header>
             <nav>
-               <img src="#" alt="Logo" class="logo" width="60px">
+                <img src="#" alt="Logo" class="logo" width="60px">
                 <div class="nav-links">
                     <a href="../index.html">Home</a>
                     <a href="page2.html">Register</a>
                     <a href="page3.html">Ticket</a>
-                </div>  
+                </div>
             </nav>
         </header>
 
         <h1>Hotel Booking Form</h1>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <form id="bookingForm" action="page3.html" method="get">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-        <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date" required><br><br>
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
 
-        <label for="noOfDays">Number Of Days:</label><br>
-        <input type="number" id="noOfDays" name="noOfDays" required><br><br>
+            <label for="noOfDays">Number Of Days:</label><br>
+            <input type="number" id="noOfDays" name="noOfDays" required><br><br>
 
-        <label for="people">Number of People:</label><br>
-        <input type="number" id="people" name="people" min="1" required><br><br>
+            <label for="people">Number of People:</label><br>
+            <input type="number" id="people" name="people" min="1" required><br><br>
 
-        <label for="addons">Select Add-ons:</label><br>
-        <select id="addons" name="addons" multiple>
-            <option value="breakfast">Breakfast Buffet - 900Php</option>
-            <option value="transport">Airport Transport - 400Php</option>
-            <option value="comedy">Comedy Show - 500Php</option>
-            <option value="massage">Massage - 1200Php</option>
-        </select><br><br>
+            <label for="addons">Select Add-ons:</label><br>
+            <select id="addons" name="addons" multiple>
+                <option value="breakfast">Breakfast Buffet - 900Php</option>
+                <option value="transport">Airport Transport - 400Php</option>
+                <option value="comedy">Comedy Show - 500Php</option>
+                <option value="massage">Massage - 1200Php</option>
+            </select><br><br>
 
-        <input type="submit" onclick="calculatePrice()" value="Book Now">
+            <input type="submit" value="Book Now">
+        </form>
 
         <div class="rooms">
-                    <div class="singleRoom">
-                        <img src="#" alt="#">
-                        <p></p>
-                    </div>
+            <div class="singleRoom">
+                <img src="#" alt="#">
+                <p></p>
+            </div>
 
-                        <div class="doubleRoom">
-                            <img src="#" alt="#">
-                            <p></p>
-                        </div>
+            <div class="doubleRoom">
+                <img src="#" alt="#">
+                <p></p>
+            </div>
 
-                            <div class="kingRoom">
-                                <img src="#" alt="#">
-                                <p></p>
-                            </div>
+            <div class="kingRoom">
+                <img src="#" alt="#">
+                <p></p>
+            </div>
 
-                                <div class="quadRoom">
-                                    <img src="#" alt="#">
-                                    <p></p>
-                                </div>
+            <div class="quadRoom">
+                <img src="#" alt="#">
+                <p></p>
+            </div>
 
-                                    <div class="luxurySuite">
-                                        <img src="#" alt="#">
-                                        <p></p>
-                                    </div>
-                                </div>
-    </form>
+            <div class="luxurySuite">
+                <img src="#" alt="#">
+                <p></p>
+            </div>
+        </div>
+    </div>
 
-            <footer class="footer">
-                <div class="socials">
-                    <a href="#"><img src="#" width="36px"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                    <a href="#"><img src="#" width="36"></a>
-                </div>
-        
-                    <p class="copyright">© 2024 | All Rights Reserved</p>
-        
-              </footer>
+    <footer class="footer">
+        <div class="socials">
+            <a href="#"><img src="#" width="36px"></a>
+            <a href="#"><img src="#" width="36"></a>
+            <a href="#"><img src="#" width="36"></a>
+        </div>
 
-<style>
-.contanier{
-    width: 100%;
-    height: 100vh;
-}
-
-.logo {
-            transition: 0.33s ease;
-        }
-        
-        .logo:hover{
-            color:  rgb(136, 12, 244);
-            text-shadow: 25px rgb(136, 12, 244), 
-                        50px  rgb(136, 12, 244);
-            transform: scale(1.1);
-        }
-        
-header nav{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding-top: 20px;
-    z-index: 100;
-    position: relative;
-}
-header nav .logo{
-    font-size: 35px;
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-header nav .nav-links a{
-    color: #000000;
-    margin-left: 50px;
-    position: relative;
-}
-header nav .nav-links a::after{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(to left, #4200fc , #f901fc);
-    transition: 0.3s;
-}
-header nav .nav-links a:hover::after{
-    width: 100%;
-}
-
-.footer{
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            padding: 40px 0;
-            margin-top: 40px;
-        }
-        .footer .socials{
-            text-align: center;
-            padding-bottom: 25px;
-            color:aliceblue;
-        }
-        .footer .socials a{
-            font-size: 24px;
-            color: aliceblue;
-            border: 2px solid  rgb(136, 12, 244);
-            width: 40px;
-            height: 40px;
-            line-height: 39px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            margin: 0 8px;
-            box-shadow:0px 0px 25px  rgb(136, 12, 244), 
-                       0px 0px 50px  rgb(136, 12, 244);
-            transition: 0.40s ease;
-        }
-        .footer .socials a:hover{
-            transform: scale(1.5) translateY(-10px);
-            color: rgb(136, 12, 244);
-            border: 2px solid  rgb(136, 12, 244);
-        }
-
-        .footer .copyright{
-            margin-top: 15px;
-            text-align: center;
-            font-size: 10px;
-            color: aliceblue;
-        }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <p class="copyright">© 2024 | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
