@@ -114,12 +114,23 @@ span{
 #times {
     width: 50cw;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-end;
     padding: 20px;
-    border-radius: 20px; /* Adding border-radius to create an oblong shape */
-    background-color: #ffffff; /* Adding background color to the oblong shape */
+    background-color: #ffffff; 
+}
+
+#timeh1 {
+    display: flex;
+    justify-content: center;
+}
+
+.timecontainer {
+    border: solid 1px black;
+    background-color: burlywood;
+    color: rgb(71, 30, 5);
+    padding: 2%;
+    border-radius: 2%; /* for aesthetic purposes */
 }
 
 .time {

@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body> 
-
-
-
     <div class="container"> 
-    <header>
-        <nav>
-           <img src="./images/logo.png" alt="Logo" class="logo" width="80px">
-            <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./html/page2.html">Register</a>
-                <a href="./html/page3.html">Ticket</a>
-            </div>  
-        </nav>
-    </header>
+        <header>
+            <nav>
+                <img src="./images/logo.png" alt="Logo" class="logo" width="80px">
+                <div class="nav-links">
+                    <a href="./index.html">Home</a>
+                    <a href="./html/page2.html">Register</a>
+                    <a href="./html/page3.html">Ticket</a>
+                </div>  
+            </nav>
+        </header>
     </div>
-
-
-        <div class="content">
+    
+    
+    <div class="content">
             <img src="./images/bg.png" alt="img" width="10px">
             <H1>Welcome to <span>JSZ</span> Booking Website!</H1>
             <p>
@@ -33,13 +30,14 @@
                 Experience unparalleled convenience and customer support with JSZ Booking, where your comfort and satisfaction are our top priorities.
             </p> 
         </div>
-
+        
+        <div id="timeh1"><h1>The Time Right Now</h1></div>
         <div id="times">
-            <div class="time timePh"></div>
-            <div class="time timeJp"></div>
-            <div class="time timeUs"></div>
+            <div class="timecontainer" id="timePh"></div>
+            <div class="timecontainer" id="timeJp"></div>
+            <div class="timecontainer" id="timeUs"></div>
         </div>
-
+        
         <footer class="footer">
             <div class="socials">
                 <a href="#"><img src="./images/tiktik.png" width="39px"></a>
@@ -50,33 +48,6 @@
         </footer>
     </div>
 
-    <script>
-        // Function to get current time in a specific timezone
-        function getCurrentTime(timezone) {
-            const date = new Date().toLocaleString("en-US", { timeZone: timezone });
-            return new Date(date);
-        }
-
-        // Function to format time
-        function formatTime(date) {
-            const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
-            return date.toLocaleString('en-US', options);
-        }
-
-        // Display current time for each timezone
-        const timePh = document.querySelector('.timePh');
-        const timeJp = document.querySelector('.timeJp');
-        const timeUs = document.querySelector('.timeUs');
-
-        setInterval(() => {
-            const currentTimePh = getCurrentTime('Asia/Manila');
-            const currentTimeJp = getCurrentTime('Asia/Tokyo');
-            const currentTimeUs = getCurrentTime('America/New_York');
-
-            timePh.textContent = `Philippines: ${formatTime(currentTimePh)}`;
-            timeJp.textContent = `Japan: ${formatTime(currentTimeJp)}`;
-            timeUs.textContent = `US (New York): ${formatTime(currentTimeUs)}`;
-        }, 1000); // Update every second
-    </script>
+    <script src="./js/index.js"></script> <!-- only works when put here  -->
 </body>
 </html>
