@@ -9,9 +9,10 @@
 <body>
     <div class="container"> 
 
+        <!-- NAVBAR -->
         <header>
             <nav>
-               <img src="../images/logo.png" alt="Logo" class="logo" width="80px">
+               <img src="../img/logo.png" alt="Logo" class="logo" width="80px">
                 <div class="nav-links">
                     <a href="../index.html">Home</a>
                     <a href="./page2.html">Register</a>
@@ -22,20 +23,26 @@
         </div>
         <div class="bookingForm">
 
+            <!-- TITLE -->
         <h1>Hotel Booking Form</h1>
 
-    <form id="bookingForm" action="page3.html" method="get">
+        <!-- THE MAIN FORM -->
+    <form id="bookingForm" action="page3.html" method="get"> 
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="date">Date:</label><br>
         <input type="date" id="date" name="date" required><br><br>
 
         <label for="noOfDays">Number Of Days:</label><br>
-        <input type="number" id="noOfDays" name="noOfDays" required><br><br>
+        <input type="number" id="noOfDays" name="noOfDays" min="1" max="10" required><br><br>
 
+        <!-- NEEDED TO DECIDE HOW MANY ROOMS ARE NEEDED (PEOPLE/CAPACITY) -->
         <label for="people">Number of People:</label><br>
-        <input type="number" id="people" name="people" min="1" required><br><br>
+        <input type="number" id="people" name="people" min="1" max="10" required><br><br>
 
 
         <label for="roomType">Select Room:</label><br>
@@ -48,12 +55,21 @@
             <option value="penthouse">Penthouse Suite - 10000Php</option>
         </select><br><br>
 
+        <!-- <label for="addons">Add-ons:</label><br>   TO BE ADDED
+        <fieldset id="addons">
+            <label for="massage"></label>
+            <input type="radio" id="massage">
+
+        </fieldset> -->
+        
+
         <input type="submit" value="Book Now">
     </form>
 
     </div>
 
 
+    <!-- DESCRIPTIONS + PICS -->
     <div class="container">
 
         <h1 class="heading">Rooms</h1>
@@ -61,37 +77,37 @@
         <div class="box-container">
     
             <div class="box">
-                <img src="../images/single.jpg" alt="">
+                <img src="../img/single.jpg" alt="">
                 <h3>Single Room</h3>
                 <p>Refreshing and relaxing room for your solo travel vacations made to bring you comfort and joy. Good for 1 person.</p>
             </div>
     
             <div class="box">
-                <img src="../images/double.jpg" alt="">
+                <img src="../img/double.jpg" alt="">
                 <h3>Double Room</h3>
                 <p>Perfect for your bestie sleepover or vacation with its two single beds and spacious room. Good for 2-4 people.</p>
             </div>
     
             <div class="box">
-                <img src="../images/king.jpg" alt="">
+                <img src="../img/king.jpg" alt="">
                 <h3>King Room</h3>
                 <p>Made with lively interiors to bring brightness vibes to the room with its king sized bed and shower room with luxurious bath tub.</p>
             </div>
     
             <div class="box">
-                <img src="../images/quad.jpg" alt="">
+                <img src="../img/quad.jpg" alt="">
                 <h3>Quad Room</h3>
-                <p>A great choice for your family vacations or friend group hangouts. With three spacious beds and huge shower room, comfort is certain.?</p>
+                <p>A great choice for your family vacations or friend group hangouts. With three spacious beds and huge shower room, comfort is certain.</p>
             </div>
             
             <div class="box">
-                <img src="../images/lux.jpg" alt="">
+                <img src="../img/lux.jpg" alt="">
                 <h3>Luxury Suite</h3>
                 <p>For families, couples, or even for yourself, this suite offers you greatness with its luxurious king sized bed and other extravagant features. Bath tub and veranda for you to access. Inclusive of free breakfast buffet and massage spa.</p>
             </div>
 
             <div class="box">
-                <img src="../images/pent.jpg" alt="">
+                <img src="../img/pent.jpg" alt="">
                 <h3>Penthouse Suite</h3>
                 <p>Definitely for huge get together celebrations with many rooms available that has its own shower room. A kitchen, a living room, a mini bar, study room, and a jacuzzi. Inclusive of free access to the night pool, massage spa, and hotel meals.</p>
             </div>
@@ -100,15 +116,16 @@
     
     </div>
 
+    <!-- FOOTER -->
         <footer class="footer">
             <div class="socials">
-                <a href="#"><img src="../images/tiktik.png" width="36px"></a>
-                <a href="#"><img src="../images/twittwit.png" width="36"></a>
-                <a href="#"><img src="../images/fb.png" width="36"></a>
+                <a href="#"><img src="../img/tiktik.png" width="36px"></a>
+                <a href="#"><img src="../img/twittwit.png" width="36"></a>
+                <a href="#"><img src="../img/fb.png" width="36"></a>
             </div>
     
                 <p class="copyright">© 2024 | All Rights Reserved</p>
     
         </footer>
 </body>
-</html>
+</htdocs>
