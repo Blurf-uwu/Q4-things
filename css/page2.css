@@ -236,3 +236,7 @@ header nav .nav-links a:hover::after{
         padding: 3%;
         border-radius: 5%;
     }
+
+    #title {
+        color: whitesmoke;
+    }

@@ -235,3 +235,7 @@ header nav .nav-links a:hover::after{
     justify-content: space-evenly;
     align-items: center;
 }
+
+span {
+    font-weight: bold;
+}

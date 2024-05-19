@@ -8,65 +8,65 @@ window.addEventListener('DOMContentLoaded', (event) => { // occurs when page has
     let addons = urlParams.getAll('addons');
     let roomType = urlParams.get('roomType');
     let noOfRooms = 0;
-    let totalPrice = noOfDays * 1000;
-
-    for (let i = 0; i < addons.length; i++) {
-        switch (addons[i]) {
-            case "breakfast":
-                totalPrice += 900;
-                break;
-            case "transport":
-                totalPrice += 400;
-                break;
-            case "comedy":
-                totalPrice += 500;
-                break;
-            case "massage":
-                totalPrice += 1200;
-                break;
-        }
-    }
+    let totalPrice = 0;
 
     switch (roomType) {
         case "single":
-            totalPrice += 900;
+            totalPrice += 500;
             noOfRooms = people;
             break;
         case "double":
-            totalPrice += 400;
+            totalPrice += 900;
             noOfRooms = Math.ceil(people / 2);
             break;
         case "king":
-            totalPrice += 400;
+            totalPrice += 1400;
             noOfRooms = Math.ceil(people / 3);
             break;
         case "quad":
-            totalPrice += 500;
+            totalPrice += 3000;
             noOfRooms = Math.ceil(people / 4);
             break;
         case "luxury":
-            totalPrice += 1200;
+            totalPrice += 5000;
             noOfRooms = Math.ceil(people / 5);
             break;
         case "penthouse":
-            totalPrice += 1200;
+            totalPrice += 10000;
             noOfRooms = Math.ceil(people / 10);
             break;
     }
 
-    totalPrice *= noOfRooms;
+    totalPrice *= noOfRooms * noOfDays;
+
+    for (let i = 0; i < addons.length; i++) {
+        switch (addons[i]) {
+            case "breakfast":
+                totalPrice += 900*people;
+                break;
+            case "transport":
+                totalPrice += 400*people;
+                break;
+            case "comedy":
+                totalPrice += 500*people;
+                break;
+            case "massage":
+                totalPrice += 1200*people;
+                break;
+        }
+    }
 
     const addonsList = addons.map(addon => `<li>${addon}</li>`).join('');
 
     document.getElementById('ticket').innerHTML = `
         <h1>Booking Summary</h1>
-        <p>Hello <strong>${name}</strong>! please check your email <strong>${email}</strong> to confirm that you're booked!</p>
-        <p><strong>Number of Days:</strong> ${noOfDays}</p>
-        <p><strong>Number of People:</strong> ${people}</p>
-        <p><strong>Room Type:</strong> ${roomType}</p>
-        <p><strong>Number of Rooms:</strong> ${noOfRooms}</p>
-        <p><strong>Add-ons:</strong></p>
+        <p>Hello <span>${name}</span>! please check your email <span>${email}</span> to confirm that you're booked!</p>
+        <p><span>Number of Days:</span> ${noOfDays}</p>
+        <p><span>Number of People:</span> ${people}</p>
+        <p><span>Room Type:</span> ${roomType}</p>
+        <p><span>Number of Rooms:</span> ${noOfRooms}</p>
+        <p><span>Add-ons:</span></p>
         <ul>${addonsList}</ul>
-        <p><strong>Total Price:</strong> ${totalPrice}Php</p>
+        <p><span>Total Price:</span> ${totalPrice}Php</p>
     `;
 });

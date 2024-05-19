@@ -11,15 +11,15 @@ function formatTime(date) {
 }
 
 const timePh = document.querySelector('#timePh');
-const timeJp = document.querySelector('#timeJp');
+const timeKr = document.querySelector('#timeKr');
 const timeUs = document.querySelector('#timeUs');
 
 setInterval(() => { // reference: https://www.w3schools.com/jsref/met_win_setinterval.asp 
     const currentTimePh = getCurrentTime('Asia/Manila');
-    const currentTimeJp = getCurrentTime('Asia/Tokyo');
+    const currentTimeKr = getCurrentTime('Asia/Seoul');
     const currentTimeUs = getCurrentTime('America/New_York');
 
     timePh.textContent = `Philippines: ${formatTime(currentTimePh)}`;
-    timeJp.textContent = `Japan: ${formatTime(currentTimeJp)}`;
+    timeKr.textContent = `Korea: ${formatTime(currentTimeKr)}`;
     timeUs.textContent = `US (New York): ${formatTime(currentTimeUs)}`;
 }, 1000);
