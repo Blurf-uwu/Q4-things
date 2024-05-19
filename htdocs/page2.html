@@ -42,7 +42,7 @@
 
         <!-- NEEDED TO DECIDE HOW MANY ROOMS ARE NEEDED (PEOPLE/CAPACITY) -->
         <label for="people">Number of People:</label><br>
-        <input type="number" id="people" name="people" min="1" max="10" required><br><br>
+        <input type="number" id="people" name="people" min="1" max="30" required><br><br>
 
 
         <label for="roomType">Select Room:</label><br>
@@ -55,12 +55,20 @@
             <option value="penthouse">Penthouse Suite - 10000Php</option>
         </select><br><br>
 
-        <!-- <label for="addons">Add-ons:</label><br>   TO BE ADDED
+        <label for="addons">Add-ons:</label><br>
         <fieldset id="addons">
-            <label for="massage"></label>
-            <input type="radio" id="massage">
+            <label for="breakfast">Breakfast Buffet - 900Php</label>
+            <input type="checkbox" id="breakfast" name="addons" value="breakfast"><br>
 
-        </fieldset> -->
+            <label for="transport">Airport Transport - 400Php</label>
+            <input type="checkbox" id="transport" name="addons" value="transport"><br>
+
+            <label for="comedy">Comedy Show - 500Php</label>
+            <input type="checkbox" id="comedy" name="addons" value="comedy"><br>
+
+            <label for="massage">Massage - 1200Php</label>
+            <input type="checkbox" id="massage" name="addons" value="massage">
+        </fieldset>
         
 
         <input type="submit" value="Book Now">

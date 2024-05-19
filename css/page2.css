@@ -226,3 +226,13 @@ header nav .nav-links a:hover::after{
         font-size: 10px;
         color: aliceblue;
     }
+
+    #addons {
+        background-color: white;
+        color: black;
+    }
+    #bookingForm {
+        background-color: white;
+        padding: 3%;
+        border-radius: 5%;
+    }
