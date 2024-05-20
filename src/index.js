@@ -11,7 +11,7 @@ function formatTime(date) {
 }
 
 const timePh = document.querySelector('#timePh');
-const timeKr = document.querySelector('#timeKr');
+const timeKr = document.querySelector('#timeJp');
 const timeUs = document.querySelector('#timeUs');
 
 setInterval(() => { // reference: https://www.w3schools.com/jsref/met_win_setinterval.asp 

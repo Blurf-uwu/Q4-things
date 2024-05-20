@@ -16,6 +16,7 @@
                 <div class="nav-links">
                     <a href="../index.html">Home</a>
                     <a href="./page2.html">Register</a>
+                    <a href="./page3.html">Ticket</a>
                 </div>  
             </nav>
         </header>
@@ -23,7 +24,7 @@
         <div class="bookingForm">
 
             <!-- TITLE -->
-        <h1 id="title">Hotel Booking Form</h1>
+        <h2>Hotel Booking Form</h2>
 
         <!-- THE MAIN FORM -->
     <form id="bookingForm" action="page3.html" method="get"> 
@@ -33,15 +34,15 @@
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date" required><br><br>
+        <label for="date">Check-in:</label><br>
+        <input type="date" id="checkin" name="date" required><br><br>
 
-        <label for="noOfDays">Number Of Days:</label><br>
-        <input type="number" id="noOfDays" name="noOfDays" min="1" max="10" required><br><br>
+        <label for="date">Check-out:</label><br>
+        <input type="date" id="checkout" name="date" required><br><br>
 
         <!-- NEEDED TO DECIDE HOW MANY ROOMS ARE NEEDED (PEOPLE/CAPACITY) -->
         <label for="people">Number of People:</label><br>
-        <input type="number" id="people" name="people" min="1" max="30" required><br><br>
+        <input type="number" id="people" name="people" min="1" max="10" required><br><br>
 
 
         <label for="roomType">Select Room:</label><br>
@@ -54,23 +55,15 @@
             <option value="penthouse">Penthouse Suite - 10000Php</option>
         </select><br><br>
 
-        <label for="addons">Add-ons:</label><br>
+        <!-- <label for="addons">Add-ons:</label><br>   TO BE ADDED
         <fieldset id="addons">
-            <label for="breakfast">Breakfast Buffet - 900Php</label>
-            <input type="checkbox" id="breakfast" name="addons" value="breakfast"><br>
+            <label for="massage"></label>
+            <input type="radio" id="massage">
 
-            <label for="transport">Airport Transport - 400Php</label>
-            <input type="checkbox" id="transport" name="addons" value="transport"><br>
-
-            <label for="comedy">Comedy Show - 500Php</label>
-            <input type="checkbox" id="comedy" name="addons" value="comedy"><br>
-
-            <label for="massage">Massage - 1200Php</label>
-            <input type="checkbox" id="massage" name="addons" value="massage">
-        </fieldset>
+        </fieldset> -->
         
 
-        <input type="submit" value="Book Now">
+        <input type="submit" value="Book Now" class="submit">
     </form>
 
     </div>
@@ -78,8 +71,6 @@
 
     <!-- DESCRIPTIONS + PICS -->
     <div class="container">
-
-        <h1 class="heading">Rooms</h1>
     
         <div class="box-container">
     
