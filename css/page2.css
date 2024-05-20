@@ -36,6 +36,7 @@ header nav{
         padding-top: 20px;
         z-index: 100;
         position: relative;
+        
 
 }
     header nav .logo{
@@ -74,6 +75,9 @@ header nav .nav-links a:hover::after{
 .bookingForm{
     float: left;
     margin-left: 40px;
+    background-color:  rgba(255,255,255,0.7);
+    padding: 20px;
+    border-radius: 20px;
 }
 .img{
     float: left;
@@ -99,30 +103,31 @@ header nav .nav-links a:hover::after{
     }
 
     .name, .date, .time, .people, .add label{
-       color: white;
-       border-radius: 30px;
+        color: white;
         margin: 10px;
         resize: none;
         justify-content: center;
         border-bottom: 20px;
         width: 50%;
-
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }       
         
-    .submit{
-        text-align: center;
-        width: 100px;
-        padding: 1em;
-        font-size: 12px;
-        font-weight: bold;
-        color: black;
-        border-radius: 30px;
-        margin: 10px;
-        resize: none;
-        justify-content: center;
-        border-bottom: 20px;
-        text-align: center;
+    .bookingForm .submit{
+        margin-top:10px;
+        padding: 10px;
+        background-color: #eac756;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     
+    }
+    .bookingForm .submit:hover{
+        background-color: #e8d28a;
+        transition: 0.2s ease;
+        box-shadow:  0 0 2px 1px rgba(255, 174, 0, 0.8);
     }
 
     .container .heading{
@@ -132,6 +137,7 @@ header nav .nav-links a:hover::after{
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
     font-size: 0px;
     float:left;
+    margin-left: 20px;
 }
 
 .container .box-container{
@@ -181,7 +187,8 @@ header nav .nav-links a:hover::after{
 }
 
 .container .box-container .box:hover{
-    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    box-shadow:  0 0 2px 1px rgba(255, 174, 0, 0.8);
+    transition:0.3s ease;
     transform: scale(1.03);
 }
 
@@ -191,7 +198,7 @@ header nav .nav-links a:hover::after{
         bottom: 0;
         width: 100%;
         padding: 40px 0;
-        margin-top: 350px;
+        margin-top: 60px;
         background-color: rgb(33, 32, 32);
     }
     .footer .socials{
@@ -225,18 +232,4 @@ header nav .nav-links a:hover::after{
         text-align: center;
         font-size: 10px;
         color: aliceblue;
-    }
-
-    #addons {
-        background-color: white;
-        color: black;
-    }
-    #bookingForm {
-        background-color: white;
-        padding: 3%;
-        border-radius: 5%;
-    }
-
-    #title {
-        color: whitesmoke;
     }

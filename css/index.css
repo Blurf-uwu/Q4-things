@@ -1,22 +1,25 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Adding background color to the whole page */
+    background-color: #252222; /* Adding background color to the whole page */
+
 }
 
 .container {
     margin-top: -8px;
     width: 100%;
-    background-color: #bb6617;
-}.logo {
+    background-color: #312e2e;
+    box-shadow:  rgb(244, 201, 12) 0px 4px 8px 2px ;
+}
+.content h1, p{
+    color:#ffffff;
+}
+.logo {
     transition: 0.33s ease;
 }
 
 .logo:hover{
-    color:  rgb(237, 183, 20);
-    text-shadow: 25px rgb(237, 183, 20), 
-                50px  rgb(237, 183, 20);
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 header nav{
@@ -44,10 +47,10 @@ header nav .nav-links a{
     text-decoration: none;
     font-size: 29px;
     font-weight: bold;
-    text-shadow:
-            -1px -1px 0 black,
+        text-shadow:
+                -1px -1px 0 black,
                 1px -1px 0 black,
-            -1px 1px 0 black,
+                -1px 1px 0 black,
                 1px 1px 0 black;
 }
     header nav .nav-links a::after{
@@ -69,11 +72,11 @@ width: 100%;
     width: 100%;
     margin: auto;
     margin-bottom: 300px;
+    max-height: 370px;
 }
 
 .content img {
     width: 600px;
-    height: auto;
     margin-top: 40px; 
     margin-left: 40px;
     float: left;
@@ -81,56 +84,93 @@ width: 100%;
 }
 .content img  {
     transition: 0.33s ease;
+    border-radius: 10px;
 }
 
 .content img:hover{
     color:  rgb(237, 183, 20);
-    text-shadow: 25px rgb(237, 183, 20), 
-                50px  rgb(237, 183, 20);
+    box-shadow:  0 0 2px 1px rgba(225, 255, 1, 0.8);
     transform: scale(1.019);
+    
 }
 .content h1{
     text-align: center;
     margin-top: 40px;
     font-size:39px;
     margin-right: 30px;
+    transition: 0.3s ease;
 }
-span{
+.jsz{   
     color:  rgb(237, 183, 20);
-     text-shadow:
+    text-shadow:
          -1px -1px 0 black,
           1px -1px 0 black,
          -1px 1px 0 black,
           1px 1px 0 black;
+        transition: 0.2s ease;
   }
+ .jsz:hover{
+    color:  rgb(198, 48, 25);
+    transform: translateY(10px);
+ }
   
 .content p {
     font-size: 21px;
     margin-left: 40px;
     margin-right: 18px;
     text-align:  justify;
+    font-family: Georgia;
 }
 
-#times {
+.time {
     width: 50cw;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    padding: 20px;
-    background-color: #ffffff; 
+    font-size: 50px; color: white;
+            font-weight: 600;
+            transition: 0.3s ease;
+    font-style: none;
+    text-shadow:
+    -1.4px -1.4px 0 black,
+    1.4px -1.4px 0 black,
+    -1.4px 1.4px 0 black,
+    1.4px 1.4px 0 black;
+     text-align: center;
+   
+}
+.time:hover{
+    color:  rgb(235, 193, 54);
+            transform: scale(1.1);
 }
 
-#timeh1 {
-    display: flex;
+
+
+.maintimecontainer{
+    display:flex;
+    flex-wrap:wrap;
     justify-content: center;
 }
-
-.timecontainer {
+.timecontainer1{
     border: solid 1px black;
-    background-color: burlywood;
-    color: rgb(71, 30, 5);
+    background-color: rgb(201, 186, 167);
+    color: rgb(12, 16, 34);
     padding: 2%;
-    border-radius: 2%; /* for aesthetic purposes */
+    border-radius: 20px; 
+    border: 5px;
+    width: 60%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    font-weight: bolder;
+    height: 38px;
+}
+
+.timecontainer1:hover{
+    background-color:  rgba(24, 24, 24, 0.7);
+    box-shadow:  0 0 2px 1px rgba(255, 196, 1, 0.8);
+    color: antiquewhite;
 }
 
 .time {
@@ -139,12 +179,12 @@ span{
 }
 
 .footer{
-    
+    box-shadow:  rgb(244, 201, 12) 4px 0px 8px 2px ;
     bottom: 0;
     width: 100%;
     padding: 40px 0;
     margin-top: 0px;
-    background-color: rgb(33, 32, 32);
+    background-color: rgb(28, 28, 28);
 }
 .footer .socials{
     text-align: center;
