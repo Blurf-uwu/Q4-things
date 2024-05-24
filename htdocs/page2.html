@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSZ Booking</title>
     <link rel="stylesheet" type="text/css" href="../css/page2.css">
+    <script src="../src/page2.js"></script>
 </head> 
 <body>
     <div class="container"> 
@@ -19,6 +20,7 @@
                 </div>  
             </nav>
         </header>
+
         </div>
         <div class="bookingForm">
 
@@ -26,7 +28,7 @@
         <h1 id="title">Hotel Booking Form</h1>
 
         <!-- THE MAIN FORM -->
-    <form id="bookingForm" action="page3.html" method="get"> 
+    <form id="bookingForm" action="page3.html"> 
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -70,7 +72,8 @@
         </fieldset>
 
         <br>
-        <input type="submit" value="Book Now">
+
+        <input type="submit" value="Book Now" onclick="saveData()">
     </form>
 
     </div>

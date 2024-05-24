@@ -1,14 +1,14 @@
 window.addEventListener('DOMContentLoaded', (event) => { // occurs when page has been completely loaded 
-    const urlParams = new URLSearchParams(window.location.search);
 
-    let name = urlParams.get('name');
-    let email = urlParams.get('email');
-    let noOfDays = parseInt(urlParams.get('noOfDays'));
-    let people = parseInt(urlParams.get('people'));
-    let addons = urlParams.getAll('addons');
-    let roomType = urlParams.get('roomType');
-    let noOfRooms = 0;
+    let name = sessionStorage.getItem('name');
+    let email = sessionStorage.getItem('email');
+    let date = sessionStorage.getItem('date');
+    let noOfDays = parseInt(sessionStorage.getItem('noOfDays'));
+    let people = parseInt(sessionStorage.getItem('people'));
+    let roomType = sessionStorage.getItem('roomType');
+    let addons = JSON.parse(sessionStorage.getItem('addons'));
     let totalPrice = 0;
+    let noOfRooms = 0;
 
     switch (roomType) {
         case "single":
@@ -56,7 +56,10 @@ window.addEventListener('DOMContentLoaded', (event) => { // occurs when page has
         }
     }
 
-    const addonsList = addons.map(addon => `<li>${addon}</li>`).join('');
+    let addonsList = '';
+        for (let i = 0; i < addons.length; i++) {
+            addonsList += `<li>${addons[i]}</li>`;
+        }
 
     document.getElementById('ticket').innerHTML = `
         <h1>Booking Summary</h1>
