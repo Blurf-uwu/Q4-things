@@ -155,7 +155,7 @@ header nav .nav-links a:hover::after{
 }
 
 .container .box-container .box h3{
-    color:#444;
+    color:rgb(237, 183, 20);    
     font-size: 11px;
     padding:10px 0;
 }
@@ -228,8 +228,12 @@ header nav .nav-links a:hover::after{
     }
 
 #ticket {
-    background-color: white;
-    height: 50vh;
+    color: rgba(0, 0, 0, 0.767);
+    background-color: rgba(255, 255, 255, 0.75);
+    border:rgb(175, 134, 11) solid 1px;
+    margin: auto;
+    width: 150vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
