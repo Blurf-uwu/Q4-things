@@ -9,7 +9,6 @@
 </head> 
 <body>
     <div class="container"> 
-
         <!-- NAVBAR -->
         <header>
             <nav>
@@ -20,15 +19,16 @@
                 </div>  
             </nav>
         </header>
+    </div>
+    <!-- FORM CONTAINER -->
+    <div class="bookingForm">
 
-        </div>
-        <div class="bookingForm">
-
-            <!-- TITLE -->
-        <h1 id="title">Hotel Booking Form</h1>
+        <!-- TITLE -->
+    <h1 id="title">Hotel Booking Form</h1>
 
         <!-- THE MAIN FORM -->
     <form id="bookingForm" action="page3.html"> 
+
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -45,7 +45,7 @@
         <label for="people">Number of People:</label><br>
         <input type="number" id="people" name="people" min="1" max="30" required><br><br>
 
-
+        <!-- ROOM SELECTION -->
         <label for="roomType">Select Room:</label><br>
         <select id="roomType" name="roomType">
             <option value="single">Single Room - 500Php</option>
@@ -56,6 +56,7 @@
             <option value="penthouse">Penthouse Suite - 10000Php</option>
         </select><br><br>
 
+        <!-- ADD-ON SELECTION -->
         <label for="addons">Add-ons:</label><br>
         <fieldset id="addons">
             <label for="breakfast">Breakfast Buffet - 900Php</label>
@@ -79,7 +80,7 @@
     </div>
 
 
-    <!-- DESCRIPTIONS + PICS -->
+    <!-- DESCRIPTIONS + PICS OF EACH ROOM-->
     <div class="container">
 
         <h1 class="heading">Rooms</h1>
@@ -95,31 +96,31 @@
             <div class="box">
                 <img src="../img/double.jpg" alt="">
                 <h3>Double Room</h3>
-                <p>Perfect for your bestie sleepover or vacation with its two single beds and spacious room. Good for 2-4 people.</p>
+                <p>Perfect for your bestie sleepover or vacation with its two single beds and spacious room. Good for 2 people.</p>
             </div>
     
             <div class="box">
                 <img src="../img/king.jpg" alt="">
                 <h3>King Room</h3>
-                <p>Made with lively interiors to bring brightness vibes to the room with its king sized bed and shower room with luxurious bath tub.</p>
+                <p>Made with lively interiors to bring brightness vibes to the room with its king sized bed and shower room with luxurious bath tub. Good for 3 people</p>
             </div>
     
             <div class="box">
                 <img src="../img/quad.jpg" alt="">
                 <h3>Quad Room</h3>
-                <p>A great choice for your family vacations or friend group hangouts. With three spacious beds and huge shower room, comfort is certain.</p>
+                <p>A great choice for your family vacations or friend group hangouts. With three spacious beds and huge shower room, comfort is certain. Good for 4 people</p>
             </div>
             
             <div class="box">
                 <img src="../img/lux.jpg" alt="">
                 <h3>Luxury Suite</h3>
-                <p>For families, couples, or even for yourself, this suite offers you greatness with its luxurious king sized bed and other extravagant features. Bath tub and veranda for you to access. Inclusive of free breakfast buffet and massage spa.</p>
+                <p>For families, couples, or even for yourself, this suite offers you greatness with its luxurious king sized bed and other extravagant features. Bath tub and veranda for you to access. Inclusive of free breakfast buffet and massage spa. Good for 5 people</p>
             </div>
 
             <div class="box">
                 <img src="../img/pent.jpg" alt="">
                 <h3>Penthouse Suite</h3>
-                <p>Definitely for huge get together celebrations with many rooms available that has its own shower room. A kitchen, a living room, a mini bar, study room, and a jacuzzi. Inclusive of free access to the night pool, massage spa, and hotel meals.</p>
+                <p>Definitely for huge get together celebrations with many rooms available that has its own shower room. A kitchen, a living room, a mini bar, study room, and a jacuzzi. Inclusive of free access to the night pool, massage spa, and hotel meals. Good for 10 people</p>
             </div>
     
         </div>
@@ -134,7 +135,7 @@
                 <a href="#"><img src="../img/fb.png" width="36"></a>
             </div>
     
-                <p class="copyright">© 2024 | All Rights Reserved</p>
+            <p class="copyright">© 2024 | All Rights Reserved</p>
     
         </footer>
 </body>
